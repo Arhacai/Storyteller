@@ -9,7 +9,7 @@ def homepage(request):
     except Story.DoesNotExist:
         prologue = Story.objects.create(
             title='Prologo',
-            text='¿Quien eres? Edita este prologo.'
+            text='Quien eres? Edita este prologo.'
         )
     stories = Story.objects.exclude(title=prologue.title)
     return render(
