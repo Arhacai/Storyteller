@@ -1,6 +1,7 @@
 {% extends parent_template|default:'layout.html' %}
 {% load static from staticfiles %}
 {% block content %}
+
     <article id="home" class="screen">
         <div class="home-logo">
             <h1 id="logo">Arhacai</h1>
@@ -8,28 +9,32 @@
             <h5 style="text-align: right;"><sub><strong>-- Dorian Arhacai&nbsp;--</strong></sub></h5></h2>
         </div>
     </article>
+
     <article id="prologo" class="screen">
         <h1>Prologo</h1>
         <div style="margin-bottom: 100px">
-            {{ prologue.text|safe }}
+            <p>{{ prologue.text|safe }}</p>
         </div>
     </article>
-    <article id="archivo" class="container screen">
-    <div class="row">
-        <div class="column full"><h1>Archivo</h1></div>
-    </div>
-    <div class="row">
-        <div class="column third">&nbsp;</div>
-        <div class="column two-thirds">
-            <nav>
-                <ul>
-                    {% for story in stories %}
-                        <li><a href="{% url 'story-detail' pk=story.pk %}">{{ story.title }}</a></li>
-                    {% empty %}
-                        <li><em>No hay cuentos activos.</em></li>
-                    {% endfor %}
-                </ul>
-            </nav>
+
+    <article id="archivo" class="container footer">
+        <div class="row">
+            <div class="column full"><h1>Archivo</h1></div>
+        </div>
+
+        <div class="row">
+            <div class="column third">&nbsp;</div>
+            <div class="column two-thirds">
+                <nav>
+                    <ul>
+                        {% for story in stories %}
+                            <li><a href="{% url 'story-detail' pk=story.pk %}">{{ story.title }}</a></li>
+                        {% empty %}
+                            <li>No hay cuentos activos.</li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
         </div>
     </article>
 {% endblock %}

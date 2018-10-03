@@ -79,6 +79,10 @@ a,a:active,a:visited{
 .screen{
 	min-height: 100%;
 }
+.footer {
+    min-height: 50%;
+
+}
 .home-logo{
 	width: 50%;
   margin: auto;

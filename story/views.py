@@ -4,10 +4,13 @@ from .models import Story
 
 
 def homepage(request):
-    prologue = Story.objects.get_or_create(
-        title='Prologo',
-        text='Debes editar este prologo.'
-    )
+    try:
+        prologue = Story.objects.get(title='Prologo')
+    except Story.DoesNotExist:
+        prologue = Story.objects.create(
+            title='Prologo',
+            text='¿Quien eres? Edita este prologo.'
+        )
     stories = Story.objects.exclude(title=prologue.title)
     return render(
         request, 'index.html', {'prologue': prologue, 'stories': stories}
