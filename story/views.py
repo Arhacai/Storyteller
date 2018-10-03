@@ -4,7 +4,10 @@ from .models import Story
 
 
 def homepage(request):
-    prologue = Story.objects.get(title='Prologo')
+    prologue = Story.objects.get_or_create(
+        title='Prologo',
+        text='Debes editar este prologo.'
+    )
     stories = Story.objects.exclude(title=prologue.title)
     return render(
         request, 'index.html', {'prologue': prologue, 'stories': stories}
