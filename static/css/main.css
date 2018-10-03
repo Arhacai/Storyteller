@@ -1,0 +1,129 @@
+@font-face {
+    font-family: GaramondPremierProDisplay;
+    src: url('../fonts/GaramondPremierProDisplay.otf');
+}
+
+@font-face {
+    font-family: GaramondPremierProBoldDisplay;
+    src: url('../fonts/GaramondPremierProBoldDisplay.otf');
+}
+@font-face {
+    font-family: GaramondPremierProSemiboldDisplay;
+    src: url('../fonts/GaramondPremierProSemiboldDisplay.otf');
+}
+html, body{
+	width: 100%;
+	height: 100%;
+	color:#333;
+}
+
+body{
+	padding-top: 5em !important;
+	background-color: #fafafa;
+	overflow-x: hidden;
+}
+
+nav{
+	font-family: GaramondPremierProDisplay;
+	font-size: 1.2em;
+	line-height: 1.5em;
+}
+nav ul{
+	  padding-top: 2.7em;
+}
+#archivo nav ul{
+	padding-top: 0;
+}
+ nav li{
+	list-style: none;
+	margin: 0;
+	cursor: pointer;
+}
+
+nav .active{
+font-family: GaramondPremierProBoldDisplay;
+}
+nav li:hover{
+	text-decoration: underline;
+}
+
+h1{
+	font-family: GaramondPremierProBoldDisplay;
+	text-align: center;
+	font-size: 2.5rem;
+}
+
+article{
+	font-family: GaramondPremierProDisplay;
+	font-size: 1.2em;
+	line-height: 1.3em;
+	padding-left: 4em !important;
+	padding-right: 4em !important;
+}
+
+
+@media (max-width: 40rem) {
+	body{padding: 0 !important;}
+  article { padding: 1em !important; }
+  .social{display: none;}
+  .fb img{
+		width: 0.6em;
+	}
+}
+
+a,a:active,a:visited{
+	color:inherit !important;
+	text-decoration: none !important;
+}
+
+.screen{
+	min-height: 100%;
+}
+.home-logo{
+	width: 50%;
+  margin: auto;
+  box-sizing: border-box;
+  padding-top: 12rem;
+}
+
+#logo{
+	font-size: 3em;
+}
+
+#home h2{
+	font-size: 1.1em;
+	text-align: center;
+}
+
+b,strong{
+	color:#999;
+}
+.logo{
+	  width: 50px;
+  margin: auto;
+  margin-top: 2em;
+}
+
+.text-title{
+	margin-top: 1em;
+}
+.btn a:hover{
+	text-decoration: underline !important;
+}
+.social{
+  right: 0;
+  position: fixed;
+  top: 5em;
+}
+.social-btn{
+	width: 24px;
+  height: 24px;
+  background: #A4A394;
+  margin-bottom: 4px;
+  padding: 2px;
+  padding-bottom: 0;
+  cursor: pointer;
+}
+.fb img{
+	width: 0.6em;
+}

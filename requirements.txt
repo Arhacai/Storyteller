@@ -1,0 +1,7 @@
+Django==1.9.13
+django-markdownx==2.0.24
+django-tinymce4-lite==1.7.2
+jsmin==2.2.2
+Markdown==3.0.1
+Pillow==5.3.0
+pytz==2018.5

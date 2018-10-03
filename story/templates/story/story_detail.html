@@ -1,0 +1,25 @@
+{% extends parent_template|default:'layout.html' %}
+{% load static from staticfiles %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <nav class="column third">
+                <ul>
+                    <li><a href="{% url 'homepage' %}#prologo">Prólogo</a></li>
+                    <li><a href="{% url 'homepage' %}#archivo">Archivo</a></li>
+                    <li class="active text-title">{{ story.title }}</li>
+                </ul>
+            </nav>
+            <article class="column two-thirds">
+
+                <h1>{{ story.title }}</h1>
+                <div>
+                    {{ story.text|safe }}
+                    <div class="logo">
+                        <a href="{% url 'homepage' %}#archivo"><img src="{% static 'css/logo-grande.png' %}"></a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+{% endblock %}

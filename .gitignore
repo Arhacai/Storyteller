@@ -1,0 +1,15 @@
+# Virtual environment
+venv/
+
+# Pycharm IDE files
+.idea
+
+# All possible .pyc files
+*.pyc
+
+# All coverage files
+.coverage
+htmlcov
+
+# Sqlite database
+*.sqlite3

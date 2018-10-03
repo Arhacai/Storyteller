@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+{% load static from staticfiles %}
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <link rel="icon" href="{% static 'img/logo.png' %}">
+        <link rel="image_src" href="{% static 'img/logo-grande.png' %}">
+        <title>
+            {% block title %}
+                Arhacai
+            {% endblock %}
+        </title>
+        <meta name="description" content="Ideas, reflexiones, historias surgidas de mis propios y caóticos pensamientos. No soy escritor, o sí, no lo se. Te invito a descubrirlo, a recorrer mi mente, a experimentar mis extremos. Bienvenido a Arhacai."/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/grid.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    </head>
+
+    <body>
+        {% block content %}{% endblock %}
+    </body>
+</html>
